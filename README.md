@@ -9,7 +9,7 @@ docker build -f Dockerfile -t docker_tutorial .
 docker run -v /home/user/Desktop/sentiment_with_api/docker_data:/root/docker_data -ti docker_tutorial /bin/bash -c "cd src && source activate ml && python train.py"
 
 3. mound folder with model and start app 
-docker run -p 7000:9999 -v /home/soten/Desktop/sentiment_with_api/docker_data:/root/docker_data -ti docker_tutorial /bin/bash -c "cd src && source activate ml && python app.py"
+docker run -p 7000:9999 -v /home/user/Desktop/sentiment_with_api/docker_data:/root/docker_data -ti docker_tutorial /bin/bash -c "cd src && source activate ml && python app.py"
 
 4. to get a response from api type in terminal:
 curl -X GET "http://127.0.0.1:7000/predict?sentence=amazing%20review"
